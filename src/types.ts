@@ -4,6 +4,7 @@ export interface Service {
   description: string;
   price: string;
   category: string;
+  image: string;
 }
 
 export interface Testimonial {

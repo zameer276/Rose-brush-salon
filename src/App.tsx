@@ -83,13 +83,13 @@ Message: ${formData.message}`;
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-white shadow-sm py-3' : 'bg-transparent py-5'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('home')}>
             <div className="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white font-bold text-xl shadow-md">R</div>
-            <span className="text-xl font-bold tracking-tight text-brand-dark">Rose Brush</span>
+            <span className="text-xl font-bold tracking-tight text-brand-pink">Rose Brush</span>
           </div>
 
           {/* Desktop Menu */}
@@ -175,7 +175,7 @@ Message: ${formData.message}`;
               </div>
               <h1 className="text-6xl md:text-8xl font-bold text-brand-dark leading-[1.05] mb-8 tracking-tighter">
                 Elegance <br />
-                <span className="text-brand-pink italic font-serif">Redefined</span>
+                <span className="text-brand-pink">Redefined</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-xl leading-relaxed font-light">
                 Professional beauty treatments delivered to your sanctuary. 
@@ -271,7 +271,7 @@ Message: ${formData.message}`;
       </section>
 
       {/* Process Section */}
-      <section className="py-32 bg-white">
+      <section className="py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-brand-pink font-bold uppercase tracking-widest text-sm mb-4 block">The Experience</span>
@@ -302,7 +302,7 @@ Message: ${formData.message}`;
 
 
       {/* Why Choose Us Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-12">
             {[
@@ -331,7 +331,7 @@ Message: ${formData.message}`;
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32 bg-brand-beige/30">
+      <section id="about" className="py-32 bg-brand-beige/30 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-24 items-center">
             <motion.div 
@@ -342,8 +342,8 @@ Message: ${formData.message}`;
             >
               <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-3xl border-[15px] border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&q=80&w=800" 
-                  alt="Wani Rabiya" 
+                  src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=800" 
+                  alt="Rose Brush Barber Shop Interior" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -367,7 +367,7 @@ Message: ${formData.message}`;
               viewport={{ once: true }}
             >
               <span className="text-brand-pink font-bold uppercase tracking-widest text-sm mb-4 block">The Visionary</span>
-              <h2 className="text-5xl font-bold mb-8 leading-tight">Elevating Beauty <br />Standards in <span className="text-brand-pink italic">Srinagar</span></h2>
+              <h2 className="text-5xl font-bold mb-8 leading-tight">Elevating Beauty <br />Standards in <span className="text-brand-pink">Srinagar</span></h2>
               <p className="text-gray-600 mb-8 text-lg leading-relaxed font-light">
                 Rose Brush Home Saloon was born from a simple realization: luxury beauty care shouldn't be a stressful commute. 
                 I've dedicated my career to mastering the art of esthetics, ensuring that every treatment is a therapeutic experience.
@@ -397,13 +397,13 @@ Message: ${formData.message}`;
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 bg-white">
+      <section id="services" className="py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
-              <span className="text-brand-pink font-bold uppercase tracking-widest text-sm mb-4 block">Our Menu</span>
-              <h2 className="text-5xl font-bold mb-6">Curated Beauty <br />Experiences</h2>
-              <p className="text-gray-500 text-lg">Every service is performed with precision, using only the finest products and techniques.</p>
+              <span className="text-brand-pink font-bold uppercase tracking-widest text-sm mb-4 block">Special Eid Offers</span>
+              <h2 className="text-5xl font-bold mb-6">Our Premium <br />Services</h2>
+              <p className="text-gray-500 text-lg">"Beauty is being comfortable in your own skin, Pamper it well" — Experience luxury at your doorstep.</p>
             </div>
             <button 
               onClick={() => scrollToSection('booking')}
@@ -421,32 +421,42 @@ Message: ${formData.message}`;
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative bg-brand-beige/20 rounded-[40px] p-10 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(232,160,191,0.2)] transition-all duration-500 border border-transparent hover:border-brand-pink/10 flex flex-col"
+                className="group relative bg-brand-beige/20 rounded-[40px] overflow-hidden hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(232,160,191,0.2)] transition-all duration-500 border border-transparent hover:border-brand-pink/10 flex flex-col"
               >
-                <div className="mb-8 flex justify-between items-start">
-                  <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-brand-pink shadow-sm group-hover:bg-brand-pink group-hover:text-white transition-all duration-500">
-                    {service.category === 'Skincare' && <Sparkles size={32} />}
-                    {service.category === 'Hair Removal' && <Heart size={32} />}
-                    {service.category === 'Makeup' && <Star size={32} />}
-                    {service.category === 'Hair' && <Sparkles size={32} />}
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-sm">
+                    <span className="text-xl font-bold text-brand-dark">{service.price}</span>
                   </div>
-                  <span className="text-2xl font-bold text-brand-dark">{service.price}</span>
                 </div>
-                
-                <span className="text-xs font-bold text-brand-pink uppercase tracking-widest mb-4 block">{service.category}</span>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-pink transition-colors">{service.title}</h3>
-                <p className="text-gray-500 text-sm mb-10 leading-relaxed flex-grow">{service.description}</p>
-                
-                <button 
-                  onClick={() => {
-                    setFormData(prev => ({ ...prev, service: service.title }));
-                    scrollToSection('booking');
-                  }}
-                  className="w-full py-4 rounded-2xl bg-brand-dark text-white font-bold group-hover:bg-brand-pink transition-all flex items-center justify-center gap-2"
-                >
-                  Book Treatment
-                  <ChevronRight size={18} />
-                </button>
+
+                <div className="p-10 flex flex-col flex-grow">
+                  <div className="mb-6 flex justify-between items-center">
+                    <span className="text-xs font-bold text-brand-pink uppercase tracking-widest block">{service.category}</span>
+                    <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-pink shadow-sm group-hover:bg-brand-pink group-hover:text-white transition-all duration-500">
+                      <Sparkles size={20} />
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-pink transition-colors">{service.title}</h3>
+                  <p className="text-gray-500 text-sm mb-10 leading-relaxed flex-grow">{service.description}</p>
+                  
+                  <button 
+                    onClick={() => {
+                      setFormData(prev => ({ ...prev, service: service.title }));
+                      scrollToSection('booking');
+                    }}
+                    className="w-full py-4 rounded-2xl bg-brand-dark text-white font-bold group-hover:bg-brand-pink transition-all flex items-center justify-center gap-2"
+                  >
+                    Book Treatment
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -454,7 +464,7 @@ Message: ${formData.message}`;
       </section>
 
       {/* Gallery Section */}
-      <section className="py-32 bg-brand-beige/10">
+      <section className="py-32 bg-brand-beige/10 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
@@ -532,7 +542,7 @@ Message: ${formData.message}`;
               </div>
 
               <div className="mt-16 pt-12 border-t border-white/10 relative z-10">
-                <p className="text-sm text-rose-100 italic font-light">"Professionalism is at the heart of everything we do. We bring the full salon setup to your doorstep."</p>
+                <p className="text-sm text-rose-100 font-light">"Professionalism is at the heart of everything we do. We bring the full salon setup to your doorstep."</p>
               </div>
             </div>
 
@@ -632,7 +642,7 @@ Message: ${formData.message}`;
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-32 bg-brand-beige/20">
+      <section id="testimonials" className="py-32 bg-brand-beige/20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="text-brand-pink font-bold uppercase tracking-widest text-sm mb-4 block">Kind Words</span>
@@ -655,7 +665,7 @@ Message: ${formData.message}`;
                 <div className="absolute -top-6 left-12 w-12 h-12 bg-brand-pink rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform">
                   <Sparkles size={20} fill="currentColor" />
                 </div>
-                <p className="text-gray-600 mb-10 italic leading-relaxed text-lg font-light">"{t.feedback}"</p>
+                <p className="text-gray-600 mb-10 leading-relaxed text-lg font-light">"{t.feedback}"</p>
                 <div className="flex items-center gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-brand-beige text-brand-pink flex items-center justify-center font-bold text-xl">
                     {t.name.charAt(0)}
@@ -674,7 +684,7 @@ Message: ${formData.message}`;
       </section>
 
       {/* FAQ Section */}
-      <section className="py-32 bg-white">
+      <section className="py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-24">
             <div>
@@ -728,7 +738,7 @@ Message: ${formData.message}`;
       </section>
 
       {/* Service Area Section */}
-      <section className="py-32 bg-white">
+      <section className="py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="bg-brand-dark rounded-[60px] p-16 text-white relative overflow-hidden shadow-3xl">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-pink/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
@@ -736,7 +746,7 @@ Message: ${formData.message}`;
             <div className="relative z-10 grid lg:grid-cols-2 gap-20 items-center">
               <div>
                 <span className="text-brand-pink font-bold uppercase tracking-widest text-sm mb-4 block">Availability</span>
-                <h2 className="text-5xl font-bold mb-8 leading-tight">Serving the Heart <br />of <span className="text-brand-pink italic">Srinagar</span></h2>
+                <h2 className="text-5xl font-bold mb-8 leading-tight">Serving the Heart <br />of <span className="text-brand-pink">Srinagar</span></h2>
                 <p className="text-gray-400 text-xl mb-10 font-light leading-relaxed">
                   We bring our boutique salon experience to all major residential areas in Srinagar. Our mobile unit is fully equipped for a seamless setup.
                 </p>
@@ -809,8 +819,8 @@ Message: ${formData.message}`;
           <div className="grid md:grid-cols-4 gap-16 mb-24">
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 rounded-2xl bg-brand-dark flex items-center justify-center text-white font-bold text-2xl shadow-lg">R</div>
-                <span className="text-2xl font-bold tracking-tighter text-brand-dark">Rose Brush</span>
+                <div className="w-12 h-12 rounded-2xl bg-brand-pink flex items-center justify-center text-white font-bold text-2xl shadow-lg">R</div>
+                <span className="text-2xl font-bold tracking-tighter text-brand-pink">Rose Brush</span>
               </div>
               <p className="text-gray-500 text-base leading-relaxed mb-10 font-light">
                 Redefining beauty convenience in Srinagar. Professional salon standards delivered with a personal touch.
