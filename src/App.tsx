@@ -47,7 +47,7 @@ export default function App() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hello Rose Brush Home Saloon,
+    const message = `Hello Rose Brush Salon,
 
 I want to book a home service appointment.
 
@@ -88,8 +88,8 @@ Message: ${formData.message}`;
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-white shadow-sm py-3' : 'bg-transparent py-5'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <div className="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white font-bold text-xl shadow-md">R</div>
-            <span className="text-xl font-bold tracking-tight text-brand-pink">Rose Brush</span>
+            <div className="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white font-bold text-xl shadow-md">RB</div>
+            <span className="text-xl font-bold tracking-tight text-brand-pink">Rose Brush Salon</span>
           </div>
 
           {/* Desktop Menu */}
@@ -179,7 +179,7 @@ Message: ${formData.message}`;
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-xl leading-relaxed font-light">
                 Professional beauty treatments delivered to your sanctuary. 
-                Experience the luxury of <span className="font-semibold text-brand-dark">Rose Brush</span> by Wani Rabiya.
+                Experience the luxury of <span className="font-semibold text-brand-dark">Rose Brush Salon</span>.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6">
@@ -343,7 +343,7 @@ Message: ${formData.message}`;
               <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-3xl border-[15px] border-white">
                 <img 
                   src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=800" 
-                  alt="Rose Brush Barber Shop Interior" 
+                  alt="Rose Brush Salon Interior" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -369,7 +369,7 @@ Message: ${formData.message}`;
               <span className="text-brand-pink font-bold uppercase tracking-widest text-sm mb-4 block">The Visionary</span>
               <h2 className="text-5xl font-bold mb-8 leading-tight">Elevating Beauty <br />Standards in <span className="text-brand-pink">Srinagar</span></h2>
               <p className="text-gray-600 mb-8 text-lg leading-relaxed font-light">
-                Rose Brush Home Saloon was born from a simple realization: luxury beauty care shouldn't be a stressful commute. 
+                Rose Brush Salon was born from a simple realization: luxury beauty care shouldn't be a stressful commute. 
                 I've dedicated my career to mastering the art of esthetics, ensuring that every treatment is a therapeutic experience.
               </p>
               
@@ -819,8 +819,8 @@ Message: ${formData.message}`;
           <div className="grid md:grid-cols-4 gap-16 mb-24">
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 rounded-2xl bg-brand-pink flex items-center justify-center text-white font-bold text-2xl shadow-lg">R</div>
-                <span className="text-2xl font-bold tracking-tighter text-brand-pink">Rose Brush</span>
+                <div className="w-12 h-12 rounded-2xl bg-brand-pink flex items-center justify-center text-white font-bold text-2xl shadow-lg">RB</div>
+                <span className="text-2xl font-bold tracking-tighter text-brand-pink">Rose Brush Salon</span>
               </div>
               <p className="text-gray-500 text-base leading-relaxed mb-10 font-light">
                 Redefining beauty convenience in Srinagar. Professional salon standards delivered with a personal touch.
@@ -883,7 +883,7 @@ Message: ${formData.message}`;
           </div>
 
           <div className="pt-12 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-8 text-gray-400 text-sm font-light">
-            <p>© 2026 Rose Brush Home Saloon. Crafted for elegance.</p>
+            <p>© 2026 Rose Brush Salon. Crafted for elegance.</p>
             <p>Designed for <span className="text-brand-dark font-bold">Wani Rabiya</span></p>
             <div className="flex gap-10">
               <a href="#" className="hover:text-brand-pink transition-colors">Privacy</a>
