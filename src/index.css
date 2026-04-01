@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
@@ -20,6 +24,10 @@
 @layer base {
   body {
     @apply font-sans text-brand-dark bg-brand-beige;
+  }
+  
+  section, footer {
+    scroll-margin-top: 100px;
   }
 }
 

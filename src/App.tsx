@@ -64,17 +64,28 @@ Message: ${formData.message}`;
   };
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsMenuOpen(false);
+    
+    // Small delay to allow the menu closing animation to start and layout to stabilize
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 150);
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-white shadow-sm py-3' : 'bg-transparent py-5'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('home')}>
             <div className="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white font-bold text-xl shadow-md">R</div>
@@ -120,7 +131,7 @@ Message: ${formData.message}`;
                   <button 
                     key={item} 
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-left py-2 font-medium border-b border-gray-50"
+                    className="w-full text-left py-3 font-medium border-b border-gray-50 hover:text-brand-pink transition-colors cursor-pointer"
                   >
                     {item}
                   </button>
